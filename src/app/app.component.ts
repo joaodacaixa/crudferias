@@ -1,10 +1,7 @@
 
-import { FeriasService } from './services/ferias.service';
+
 import { Component, OnInit, Input } from '@angular/core';
-import { Ferias } from './models/ferias';
-import { Funcionario } from './models/funcionario';
-import { Departamento } from './models/departamento';
-import { EditFeriasComponent } from './edit-ferias/edit-ferias.component';
+
 
 @Component({
   selector: 'app-root',

@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { Departamento } from '../models/departamento';
-import { DepartamentoService } from './../services/departamento.service';
 import { FeriasService } from '../services/ferias.service';
 
 @Component({
@@ -20,11 +19,14 @@ ngOnInit():void{
   .subscribe((result:Departamento[])=>(this.arraydedepartamentos=result));
 }
 
-updateDepartamentoList(arraydepartamentos:Departamento[]){
-  this.arraydedepartamentos=arraydepartamentos;
+updateDepartamentoList(arraydedepartamentos:Departamento[]){
+  console.log(arraydedepartamentos);
+  this.arraydedepartamentos=arraydedepartamentos;
 }
 initNovoDepartamento(){
+
   this.departamentoToEdit=new Departamento();
+  console.log(this.departamentoToEdit);
 }
 
 editDepartamento(departamento:Departamento){

@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { Departamento } from '../models/departamento';
-import { DepartamentoService } from './../services/departamento.service';
 import { FeriasService } from '../services/ferias.service';
 
 @Component({
@@ -18,29 +17,30 @@ export class EditDepartamentoComponent implements OnInit{
 
 
 
-ngOnInit():void{
-
-}
+ngOnInit():void{}
 
 
-updateDepartamento(departamento:Departamento){
+UpdateDepartamento(departamento:Departamento){
+  console.log(departamento);
   this.departamentoService
   .updateDepartamento(departamento)
-  .subscribe((departamento:Departamento[])=>this.departamentoUpdate.emit(departamento));
+  .subscribe((arraydedepartamento:Departamento[])=>this.departamentoUpdate.emit(arraydedepartamento));
 
 }
 
-deleteDepartamento(departamento:Departamento)
+DeleteDepartamento(departamento:Departamento)
 {
+  console.log(departamento);
   this.departamentoService
   .deleteDepartamento(departamento)
-  .subscribe((departamento:Departamento[])=>this.departamentoUpdate.emit(departamento));
+  .subscribe((arraydedepartamento:Departamento[])=>this.departamentoUpdate.emit(arraydedepartamento));
 
 }
 
-  createDepartamento(departamento:Departamento){
+  CreateDepartamento(departamento:Departamento){
+    console.log(departamento);
     this.departamentoService
     .createDepartamento(departamento)
-    .subscribe((departamento:Departamento[])=>this.departamentoUpdate.emit(departamento));
+    .subscribe((arraydedepartamento:Departamento[])=>this.departamentoUpdate.emit(arraydedepartamento));
   }
 }

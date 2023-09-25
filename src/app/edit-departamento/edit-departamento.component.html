@@ -4,10 +4,12 @@
 
   <div>
     Nome:
+    <input [(ngModel)] = "departamento.id "/>
     <input [(ngModel)]="departamento.nome" placeholder="Nome"/>
+
   </div>
-  <button (click)="updateDepartamento" *ngIf="departamento.id">Atualizar</button>
-  <button (click)="deleteDepartamento" *ngIf="departamento.id">Excluir</button>
-  <button (click)="createDepartamento" *ngIf="!departamento.id">Cadatastrar</button>
+  <button (click)="UpdateDepartamento" *ngIf="departamento.id">Atualizar</button>
+  <button (click)="DeleteDepartamento" *ngIf="departamento.id">Excluir</button>
+  <button (click)="CreateDepartamento" *ngIf="!departamento.id">Cadatastrar</button>
 
 
