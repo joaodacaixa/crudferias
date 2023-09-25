@@ -1,0 +1,17 @@
+<div *ngIf="ferias">
+  <h2>Alterar/Excluir Férias</h2>
+  <div>
+    Nome Funcionario:
+    <!--<input [(ngModel)]="ferias.funcionario" placeholder="Nome do Funcionario"/>-->
+    <select ngfor="funcionario let arraydefuncionario"> Funcionario </select>
+    Data de Inicio
+    <input type="date" [(ngModel)]="ferias.datainicio" placeholder="Data inicio"/>
+    Quantidade de dias:
+    <input [(ngModel)]="ferias.quantidadededias" placeholder="Dias de Gozo"/>
+  </div>
+  <button (click)="updateFerias" *ngIf="ferias.id">Atualizar</button>
+  <button (click)="deleteFerias" *ngIf="ferias.id">Excluir</button>
+  <button (click)="createFerias" *ngIf="!ferias.id">Cadatastrar</button>
+
+
+

@@ -4,13 +4,24 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EditHeroComponent } from './components/edit-hero/edit-hero.component';
+
 import { FormsModule } from '@angular/forms';
+import { EditFeriasComponent } from './edit-ferias/edit-ferias.component';
+import { EditFuncionarioComponent } from './edit-funcionario/edit-funcionario.component';
+import { EditDepartamentoComponent } from './edit-departamento/edit-departamento.component';
+import { ListaFuncionarioComponent } from './lista-funcionario/lista-funcionario.component';
+import { ListaDepartamentoComponent } from './lista-departamento/lista-departamento.component';
+import { ListaFeriasComponent } from './lista-ferias/lista-ferias.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EditHeroComponent
+    EditFeriasComponent,
+    EditFuncionarioComponent,
+    EditDepartamentoComponent,
+    ListaFuncionarioComponent,
+    ListaDepartamentoComponent,
+    ListaFeriasComponent
   ],
   imports: [
     BrowserModule,

@@ -1,21 +1,15 @@
-<button (click)="initNewHero()"> Criar Novo Heroi</button>
+<header>
+  <h1> Aplicativo de Geranciamento de Férias</h1>
+  <nav>
+    <ul>
+      <a routerLink="">Home</a>
+      <a routerLink="./ferias">Módulo Férias</a>
+      <a routerLink="./funcionario">Módulo Funcionário</a>
+      <a routerLink="./departamento">Módulo Departamento</a>
+    </ul>
+  </nav>
+</header>
 
-<table>
-<thead>
-   <th> Name </th>
-   <th> First Name </th>
-   <th> Last Name </th>
-   <th> Place </th>
-</thead>
-  <tbody>
-    <tr *ngFor="let hero of heroes">
-      <td>{{hero.name}}</td>
-      <td>{{hero.firstName}}</td>
-      <td>{{hero.lastName}}</td>
-      <td>{{hero.place}}</td>
-      <td><button (click)="editHero(hero)"> Alterar Heroi</button></td>
-    </tr>
-  </tbody>
-</table>
+<router-outlet></router-outlet>
 
-<app-edit-hero [hero]="heroToEdit" (heroesUpdate)="updateHeroList($event)"></app-edit-hero>
+<footer>  <h4>Produção Temática</h4> </footer>

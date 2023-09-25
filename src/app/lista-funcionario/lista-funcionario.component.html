@@ -1,0 +1,27 @@
+<Button (click)="initNovoFuncionario()">Cadastrar Funcionario</Button>
+
+<table>
+
+  <thead>
+    <th> Matricula </th>
+    <th> Funcionário </th>
+    <th> Departamento </th>
+
+   </thead>
+
+  <tbody>
+    <tr *ngFor="let funcionario of arraydefuncionario">
+      <td>{{funcionario.matricula}}</td>
+      <td>{{funcionario.nome}}</td>
+      <td>{{funcionario.departamento}}</td>
+
+      <td><button (click)="editFuncionario(funcionario)"> Alterar Dados do Funcionário</button></td>
+    </tr>
+  </tbody>
+
+</table>
+
+<app-edit-funcionario [funcionario]="funcionarioToEdit" (funcionarioUpdate)="updateFuncionarioList($event)"> /app-edit-funcionario>
+
+
+

@@ -1,0 +1,13 @@
+
+<div *ngIf="departamento">
+  <h2>Alterar/Excluir Fepartamento</h2>
+
+  <div>
+    Nome:
+    <input [(ngModel)]="departamento.nome" placeholder="Nome"/>
+  </div>
+  <button (click)="updateDepartamento" *ngIf="departamento.id">Atualizar</button>
+  <button (click)="deleteDepartamento" *ngIf="departamento.id">Excluir</button>
+  <button (click)="createDepartamento" *ngIf="!departamento.id">Cadatastrar</button>
+
+

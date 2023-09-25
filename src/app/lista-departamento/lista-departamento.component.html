@@ -1,0 +1,19 @@
+<Button (click)="initNovoDepartamento()">Cadastrar Departamento</Button>
+<table>
+    <thead>
+       <th> Departamento </th>
+
+      </thead>
+
+     <tbody>
+       <tr *ngFor="let departamento of arraydedepartamentos">
+         <td>{{departamento.nome}}</td>
+
+
+         <td><button (click)="editDepartamento(departamento)"> Alterar Departamento</button></td>
+       </tr>
+     </tbody>
+
+   </table>
+
+   <app-edit-departamento [departamento]="departamentoToEdit" (departamentoUpdate)="updateDepartamentoList($event)" ></app-edit-departamento>

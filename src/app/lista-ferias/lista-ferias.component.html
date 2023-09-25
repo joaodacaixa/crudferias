@@ -1,0 +1,26 @@
+<Button (click)="initNovasFerias()">Cadastrar Novas Ferias</Button>
+
+<table>
+
+  <thead>
+    <th> Funcionário </th>
+    <th> Departamento </th>
+    <th> Início das férias </th>
+    <th> Dias de férias </th>
+    <th> Dia de retorno </th>
+   </thead>
+
+  <tbody>
+    <tr *ngFor="let ferias of arraydeferias">
+      <td>{{ferias.funcionario}}</td>
+      <td>{{ferias.datainicio}}</td>
+      <td>{{ferias.quantidadededias}}</td>
+
+      <td><button (click)="editFerias(ferias)"> Alterar Férias</button></td>
+    </tr>
+  </tbody>
+
+</table>
+
+<app-edit-ferias [ferias]="feriasToEdit" (feriasUpdated)="updateFeriasList($event)"></app-edit-ferias>
+
