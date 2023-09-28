@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output  } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { Ferias } from '../models/ferias';
 import {FeriasService} from '../services/ferias.service';
 
@@ -32,4 +32,6 @@ initNovasFerias(){
 editFerias(ferias:Ferias){
   this.feriasToEdit=ferias;
 }
+
+
 }

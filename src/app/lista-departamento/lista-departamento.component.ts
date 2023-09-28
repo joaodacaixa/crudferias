@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Departamento } from '../models/departamento';
 import { FeriasService } from '../services/ferias.service';
 
@@ -17,6 +17,7 @@ export class ListaDepartamentoComponent implements OnInit{
 ngOnInit():void{
   this.departamentoService.getDepartamento()
   .subscribe((result:Departamento[])=>(this.arraydedepartamentos=result));
+
 }
 
 updateDepartamentoList(arraydedepartamentos:Departamento[]){

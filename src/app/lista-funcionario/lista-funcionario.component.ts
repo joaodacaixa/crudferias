@@ -1,9 +1,8 @@
 
-import { Component, EventEmitter, Input, OnInit, Output  } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { Funcionario } from '../models/funcionario';
-import {FuncionarioService} from '../services/funcionario.service';
-import { Ferias } from '../models/ferias';
 import { FeriasService } from '../services/ferias.service';
+
 
 
 @Component({
@@ -16,8 +15,9 @@ export class ListaFuncionarioComponent implements OnInit{
   arraydefuncionario:Funcionario[]=[];
   funcionarioToEdit?:Funcionario;
 
-
   constructor (private funcionarioService : FeriasService){}
+
+onSubmit():void{}
 
 ngOnInit():void{
   this.funcionarioService.getFuncionario()

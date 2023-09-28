@@ -1,6 +1,6 @@
 export class Ferias{
   id? : number;
   funcionario = "";
-  datainicio=Date;
+  dataInicio="";
   quantidadededias="";
  }

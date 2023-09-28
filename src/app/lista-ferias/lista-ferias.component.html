@@ -1,26 +1,41 @@
-<Button (click)="initNovasFerias()">Cadastrar Novas Ferias</Button>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gestão de Férias</title>
+  <base href="/">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-<table>
+      <!--Bootstrap 5 icons CDN-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<button class="btn btn-primary newUser" (click)="initNovasFerias()"> Cadastrar Férias<i class="bi bi-emoji-sunglasses"></i></button>
+<!--<Button (click)="initNovasFerias()">Cadastrar Novas Ferias</Button>-->
+<div class="tabela">
+<table class="tg">
 
-  <thead>
+  <thead class="cabecalho">
     <th> Funcionário </th>
-    <th> Departamento </th>
     <th> Início das férias </th>
     <th> Dias de férias </th>
-    <th> Dia de retorno </th>
+    <th> Ação</th>
+
    </thead>
 
-  <tbody>
+  <tbody class="corpotebela">
     <tr *ngFor="let ferias of arraydeferias">
-      <td>{{ferias.funcionario}}</td>
-      <td>{{ferias.datainicio}}</td>
-      <td>{{ferias.quantidadededias}}</td>
-
-      <td><button (click)="editFerias(ferias)"> Alterar Férias</button></td>
+      <td align="center">{{ferias.funcionario}}</td>
+      <td align="center">{{ferias.dataInicio|date: 'dd/MM/yyyy'}}</td>
+      <td align="center">{{ferias.quantidadededias}}</td>
+      <td align="center">
+        <button class="btn btn-primary" (click)="editFerias(ferias)"><i class="bi bi-pencil-square"></i></button>
+        <!--<button (click)="editFerias(ferias)"> Excluir Férias</button></td>-->
     </tr>
   </tbody>
-
 </table>
-
+</div>
 <app-edit-ferias [ferias]="feriasToEdit" (feriasUpdated)="updateFeriasList($event)"></app-edit-ferias>
 

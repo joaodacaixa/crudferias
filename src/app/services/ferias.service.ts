@@ -39,7 +39,7 @@ export class FeriasService {
       `${environment.apiUrl}/${this.urlferias}/${ferias.id}`);
   }
 
-  /* teste*/
+  /* service funcionarios*/
   public getFuncionario() : Observable<Funcionario[]>{
     return this.http.get<Funcionario[]>(`${environment.apiUrl}/${this.urlfuncionario}`);
   }
@@ -55,6 +55,8 @@ export class FeriasService {
       `${environment.apiUrl}/${this.urlfuncionario}`,
       funcionario);
   }
+
+   /* service funcionarios*/
 
   public deleteFuncionario(funcionario:Funcionario) : Observable<any>{
     return this.http.delete<any>(

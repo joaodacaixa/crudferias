@@ -1,17 +1,26 @@
+<form [formGroup]="dadosferias">
 <div *ngIf="ferias">
   <h2>Alterar/Excluir Férias</h2>
   <div>
+  <div>
     Nome Funcionario:
-    <!--<input [(ngModel)]="ferias.funcionario" placeholder="Nome do Funcionario"/>-->
-    <select ngfor="funcionario let arraydefuncionario"> Funcionario </select>
-    Data de Inicio
-    <input type="date" [(ngModel)]="ferias.datainicio" placeholder="Data inicio"/>
-    Quantidade de dias:
-    <input [(ngModel)]="ferias.quantidadededias" placeholder="Dias de Gozo"/>
+    <select formControlName="funcionario" [(ngModel)]="ferias.funcionario"  >
+      <option *ngFor="let funcionario of arraydefuncionario"   > {{funcionario.nome}}</option>
+    </select>
   </div>
-  <button (click)="updateFerias" *ngIf="ferias.id">Atualizar</button>
-  <button (click)="deleteFerias" *ngIf="ferias.id">Excluir</button>
-  <button (click)="createFerias" *ngIf="!ferias.id">Cadatastrar</button>
+  <div>
+     Data de Inicio
+    <input type="date" formControlName="data" [(ngModel)]="ferias.dataInicio" (blur)="validadata(ferias.dataInicio)"/>
+  </div>
 
+  <div>
+    Quantidade de dias:
+    <input type="text" formControlName="diasdegozo" [(ngModel)]="ferias.quantidadededias" (blur)="validaqtddias(ferias.quantidadededias)" placeholder="##"/>
+  </div>
+  </div>
+  <button class="btn btn-primary newUser" (click)="deleteFerias(ferias)" *ngIf="ferias.id" >Excluir</button>
+  <button class="btn btn-primary newUser" (click)="createFerias(ferias)" [disabled]="!dadosferias.valid" *ngIf="!ferias.id"  >Cadatastrar</button>
+</div>
+</form>
 
 
