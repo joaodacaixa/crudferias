@@ -1,7 +1,13 @@
 <form [formGroup]="dpto">
 <div *ngIf="departamento">
-  <h2>Alterar/Excluir Departamento</h2>
+  <div *ngIf="departamento.id; else templateincluir">
+    <h2>Alterar / Excluir Departamento </h2>
+  </div>
+  <ng-template #templateincluir>
+    <h2>Incluir Departamento</h2>
+  </ng-template>
 
+  <div class="inputField">
   <div>
     Nome:
     <input formControlName="departamentoInput" [(ngModel)]="departamento.nome" placeholder="Nome do Departamento" (change)="validanomedpto(departamento.nome)">
@@ -11,6 +17,7 @@
     <button class="btn btn-primary newUser" (click)="DeleteDepartamento(departamento)" *ngIf="departamento.id">Excluir</button>
     <button name="cadastrar" class="btn btn-primary newUser" (click)="CreateDepartamento(departamento)" [disabled]="!dpto.valid" *ngIf="!departamento.id">Cadatastrar</button>
  </div>
+</div>
 </div>
 </form>
 

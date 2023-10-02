@@ -5,11 +5,13 @@
   box-sizing: border-box;
 }
 .tabela{
-  margin: 30px 340px;
+  margin: 10px 360px;
   word-break:normal;
   max-height: 35vh;
   overflow: scroll;
-  scrollbar-width: none;
+  overflow-x: hidden;
+  border-left: 2px solid rgb(255, 153, 0) ;
+  border-bottom: 2px solid rgb(255, 153, 0) ;
 }
 .cabecalho{
   position: sticky;

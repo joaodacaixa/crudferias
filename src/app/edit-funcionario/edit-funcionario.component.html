@@ -1,7 +1,13 @@
 <form [formGroup]="dados">
 <div *ngIf="funcionario">
 
-  <h2>Alterar/Excluir Funcionario</h2>
+  <div *ngIf="funcionario.id; else templateincluir">
+    <h2>Alterar / Excluir Funcionário </h2>
+  </div>
+  <ng-template #templateincluir>
+    <h2>Incluir Funcionário</h2>
+  </ng-template>
+  <div class="inputField">
   <div>
     Matricula:
     <input  [(ngModel)]="funcionario.matricula"  formControlName="matricula" placeholder="c######" (blur)="verificamatricula(funcionario.matricula)"/>
@@ -15,8 +21,11 @@
       <option *ngFor="let departamento of arraydedepartamentos">{{departamento.nome}}</option>
     </select>
   </div>
+  <div class="botoes">
   <button class="btn btn-primary newUser"  (click)="updateFuncionario(funcionario)" [disabled]="!dados.valid"  *ngIf="funcionario.id">Atualizar</button>
   <button class="btn btn-primary newUser" (click)="deleteFuncionario(funcionario)" [disabled]="!dados.valid" *ngIf="funcionario.id">Excluir</button>
   <button class="btn btn-primary newUser" (click)="createFuncionario(funcionario)" [disabled]="!dados.valid" *ngIf="!funcionario.id">Cadatastrar</button>
+</div>
+</div>
 </div>
 </form>

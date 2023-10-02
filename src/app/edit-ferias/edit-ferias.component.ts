@@ -37,6 +37,8 @@ var arraydefuncionario=this.feriasService.getFuncionario()
 
 var arraydeferias=this.feriasService.getFerias()
 .subscribe((result:Ferias[])=>(this.arraydeferias=result));
+
+
 }
 
 deleteFerias(ferias:Ferias)
@@ -107,6 +109,7 @@ verificaferias(nome:string){
   if(estanaarray)
   {
     alert("Esse funcionário já possui férias cadastrada!");
+    estanaarray=this.arraydeferias.some(objeto=>objeto.funcionario.includes(nome));
   }
 }
 /*
