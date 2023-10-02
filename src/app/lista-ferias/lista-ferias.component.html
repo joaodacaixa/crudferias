@@ -12,9 +12,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<button class="btn btn-primary newUser" (click)="initNovasFerias()"> Cadastrar Férias<i class="bi bi-emoji-sunglasses"></i></button>
+<button class="btn btn-primary newUser" (click)="initNovasFerias()"> Cadastrar Férias <i class="bi bi-emoji-sunglasses"></i></button>
+
+
 <!--<Button (click)="initNovasFerias()">Cadastrar Novas Ferias</Button>-->
-<div class="tabela">
+<div class="tabela" #content>
 <table class="tg">
 
   <thead class="cabecalho">
@@ -31,8 +33,7 @@
       <td align="center">{{ferias.dataInicio|date: 'dd/MM/yyyy'}}</td>
       <td align="center">{{ferias.quantidadededias}}</td>
       <td align="center">
-        <button class="btn btn-primary" (click)="editFerias(ferias)"><i class="bi bi-pencil-square"></i></button>
-        <!--<button (click)="editFerias(ferias)"> Excluir Férias</button></td>-->
+       <button class="btn btn-primary" (click)="editFerias(ferias)"> <i class="bi bi-pencil-square"></i></button>
     </tr>
   </tbody>
 </table>

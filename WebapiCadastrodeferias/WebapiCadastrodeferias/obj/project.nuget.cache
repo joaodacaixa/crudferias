@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2/lddFKy+D7fu5UVTC3XgB82Ny0XwsNuC9Q9gKkx3mZASSAObbEe0TVQZ84R9tEaVLlEZ0N17JKIA9+a/83a4w==",
+  "dgSpecHash": "9L4Og+6xQIxK8ySKemR33cihsa46PTY+mibOHkC3kb31kJCoDlf3IYdUwHQ2h91mlzrm+ZUGIzjOqo77T9m2pQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\joaod\\Desktop\\Producaotematica\\WebapiCadastrodeferias\\WebapiCadastrodeferias\\WebapiCadastrodeferias.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joaod\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\joaod\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\joaod\\.nuget\\packages\\dapper\\2.0.151\\dapper.2.0.151.nupkg.sha512",
     "C:\\Users\\joaod\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\joaod\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\joaod\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

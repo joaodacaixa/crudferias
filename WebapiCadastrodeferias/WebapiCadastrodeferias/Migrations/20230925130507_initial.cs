@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -11,14 +11,19 @@ namespace WebapiCadastrodeferias.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<string>(
+
+                
+               
+                migrationBuilder.AlterColumn<string>(
                 name: "DataInicio",
                 table: "ListaFerias",
                 type: "nvarchar(max)",
                 nullable: false,
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2");
-        }
+
+
+    }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)

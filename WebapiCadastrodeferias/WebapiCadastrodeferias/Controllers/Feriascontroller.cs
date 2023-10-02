@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using WebapiCadastrodeferias.Data;
 
@@ -10,6 +11,7 @@ namespace WebapiCadastrodeferias.Controllers
   {
 
     private readonly DataContext _context;
+    
 
     public FeriasController(DataContext context)
     {
@@ -21,6 +23,8 @@ namespace WebapiCadastrodeferias.Controllers
     {
       return Ok(await _context.ListaFerias.ToListAsync());
     }
+
+
 
     [HttpPost]
 

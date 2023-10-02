@@ -22,6 +22,8 @@ namespace WebapiCadastrodeferias.Controllers
       return Ok(await _context.ListaFuncionarios.ToListAsync());
     }
 
+
+
     [HttpPost]
 
     public async Task<ActionResult<List<Funcionario>>> CreateFuncionario(Funcionario funcionario)

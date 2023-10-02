@@ -85,3 +85,4 @@ C:\Users\joaod\Desktop\Producaotematica\WebapiCadastrodeferias\webapicadastrodef
 C:\Users\joaod\Desktop\Producaotematica\WebapiCadastrodeferias\webapicadastrodeferias\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\joaod\Desktop\Producaotematica\WebapiCadastrodeferias\webapicadastrodeferias\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\joaod\Desktop\Producaotematica\WebapiCadastrodeferias\webapicadastrodeferias\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\joaod\Desktop\Producaotematica\WebapiCadastrodeferias\WebapiCadastrodeferias\bin\Debug\net6.0\Dapper.dll

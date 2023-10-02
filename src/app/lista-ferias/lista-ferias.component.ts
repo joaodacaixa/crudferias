@@ -1,6 +1,7 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild  } from '@angular/core';
 import { Ferias } from '../models/ferias';
 import {FeriasService} from '../services/ferias.service';
+
 
 
 @Component({
@@ -10,6 +11,8 @@ import {FeriasService} from '../services/ferias.service';
 })
 
 export class ListaFeriasComponent implements OnInit{
+
+
 
 
   arraydeferias:Ferias[]=[];
@@ -32,6 +35,8 @@ initNovasFerias(){
 editFerias(ferias:Ferias){
   this.feriasToEdit=ferias;
 }
+
+
 
 
 }

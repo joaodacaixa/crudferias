@@ -4,18 +4,18 @@
   <div>
   <div>
     Nome Funcionario:
-    <select formControlName="funcionario" [(ngModel)]="ferias.funcionario"  >
-      <option *ngFor="let funcionario of arraydefuncionario"   > {{funcionario.nome}}</option>
+    <select formControlName="funcionario"  [(ngModel)]="ferias.funcionario" (change)="verificaferias(ferias.funcionario)" >
+      <option   *ngFor="let funcionario of arraydefuncionario"   > {{funcionario.nome}}</option>
     </select>
   </div>
   <div>
      Data de Inicio
-    <input type="date" formControlName="data" [(ngModel)]="ferias.dataInicio" (blur)="validadata(ferias.dataInicio)"/>
+    <input min="dataminima()" id="dataminima" type="date" (value)="01/01/2023" formControlName="data" [(ngModel)]="ferias.dataInicio" (blur)="validadata(ferias.dataInicio)"/>
+    {{ferias.dataInicio}}
   </div>
-
   <div>
     Quantidade de dias:
-    <input type="text" formControlName="diasdegozo" [(ngModel)]="ferias.quantidadededias" (blur)="validaqtddias(ferias.quantidadededias)" placeholder="##"/>
+    <input type="text" formControlName="diasdegozo" [(ngModel)]="ferias.quantidadededias" (change)="validaqtddias(ferias.quantidadededias)" />
   </div>
   </div>
   <button class="btn btn-primary newUser" (click)="deleteFerias(ferias)" *ngIf="ferias.id" >Excluir</button>

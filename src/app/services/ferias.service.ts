@@ -5,6 +5,7 @@ import {Observable} from  'rxjs/internal/Observable';
 import { environment } from 'src/environments/environment';
 import { Funcionario } from '../models/funcionario';
 import { Departamento } from '../models/departamento';
+import { Relatorio } from '../models/relatorio';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,6 +15,7 @@ export class FeriasService {
   private urlferias="Ferias";
   private urlfuncionario="Funcionario";
   private urldepartamento="Departamento";
+  private urlrelatorio="Relatorio";
 
   constructor(private http:HttpClient) { }
 
@@ -82,5 +84,10 @@ export class FeriasService {
   public deleteDepartamento(departamento:Departamento) : Observable<any>{
     return this.http.delete<any>(
       `${environment.apiUrl}/${this.urldepartamento}/${departamento.id}`);
+  }
+
+  // relatorio ferias por dpto
+  public getFeriasporDpto() : Observable<Relatorio[]>{
+    return this.http.get<Relatorio[]>(`${environment.apiUrl}/${this.urlrelatorio}`);
   }
 }

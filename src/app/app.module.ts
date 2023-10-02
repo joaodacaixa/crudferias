@@ -11,6 +11,7 @@ import { ListaFuncionarioComponent } from './lista-funcionario/lista-funcionario
 import { ListaDepartamentoComponent } from './lista-departamento/lista-departamento.component';
 import { ListaFeriasComponent } from './lista-ferias/lista-ferias.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RelatorioComponent } from './relatorio/relatorio.component';
 
 
 
@@ -24,6 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListaFuncionarioComponent,
     ListaDepartamentoComponent,
     ListaFeriasComponent,
+    RelatorioComponent,
+
 
 
   ],
@@ -32,9 +35,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-
-
+    ReactiveFormsModule
 
 
 ],
