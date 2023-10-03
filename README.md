@@ -2,24 +2,26 @@ Produção Temática PSI 13618 - aplicação para Cadastro de Férias
 
 Pré requisitos para rodar a aplicacao:
 
-Front End
+*Front End
 
 Visual Studio Code
 Node js
 Angular cli
 
-Back end
+*Back end
 Visual Studio 2022
-Sql Server
+Sql Server e
 Sql Studio Manager
 
-Back-End
+Para Executar a aplicação:
+
+* Back End
 
 abrir SQL server
 Abrir Sql Studio Manager e conectar
 
-abrir visual Studio
-abrir projeto/solucao
+abrir visual Studio 
+abrir projeto/solucao 
 selecionar na pasta \webapicadastrodeferias o arquivo webapicadastrodeferias.sln
 
 
@@ -32,7 +34,7 @@ dotnet ef database update
 iniciar depuração
 
 *********
-front end
+* Front end
 
 abrir pasta src no visual studio coder
 
