@@ -35,6 +35,9 @@ iniciar depuração
 front end
 
 abrir pasta src no visual studio coder
-abrir powershell
+
+abrir powershell e digitar
+
 ng serve -o
+
 (irá gerar a aplicação no navegador)
