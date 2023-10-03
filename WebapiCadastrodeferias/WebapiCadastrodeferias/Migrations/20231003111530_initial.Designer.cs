@@ -11,7 +11,7 @@ using WebapiCadastrodeferias.Data;
 namespace WebapiCadastrodeferias.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230925130507_initial")]
+    [Migration("20231003111530_initial")]
     partial class initial
     {
         /// <inheritdoc />
