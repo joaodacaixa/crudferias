@@ -26,7 +26,7 @@ selecionar na pasta \webapicadastrodeferias o arquivo webapicadastrodeferias.sln
 
 na linha de comando poewrshell rodar 
 
-dotnet ef datadas update 
+dotnet ef database update 
 (comando irá criar e popular banco de dados)
 
 iniciar depuração
