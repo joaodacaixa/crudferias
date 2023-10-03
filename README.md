@@ -4,27 +4,25 @@ Pré requisitos para rodar a aplicacao:
 
 *Front End
 
-Visual Studio Code
-Node js
+Visual Studio Code,
+Node js,
 Angular cli
 
 *Back end
-Visual Studio 2022
+Visual Studio 2022,
 Sql Server e
 Sql Studio Manager
 
 Para Executar a aplicação:
 
-* Back End
+**Back End
 
 abrir SQL server
 Abrir Sql Studio Manager e conectar
 
-abrir visual Studio 
-abrir projeto/solucao 
-selecionar na pasta \webapicadastrodeferias o arquivo webapicadastrodeferias.sln
-
-
+abrir visual Studio ,
+abrir projeto/solucao ,
+selecionar na pasta \webapicadastrodeferias o arquivo webapicadastrodeferias.sln 
 
 na linha de comando poewrshell rodar 
 
@@ -36,9 +34,9 @@ iniciar depuração
 *********
 * Front end
 
-abrir pasta src no visual studio coder
+abrir pasta src no visual studio code,
 
-abrir powershell e digitar
+abrir powershell e digitar,
 
 ng serve -o
 
